@@ -1,5 +1,6 @@
 console.log("Stierlitz ohuel");
 
 function encode() {
-	alert("Encoded!");
+	var gotText = document.getElementById('text-original').value;
+	console.log(gotText);
 }
