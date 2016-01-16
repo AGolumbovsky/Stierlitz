@@ -9,10 +9,10 @@ function encode() {
 	else {
 
 		/*
-		- need to .split('') the text
-		- locate spaces and anchor words to them
-		- space-1 && space+1 dont' change
-		- everything between s-1 and s+1 is scrambled
+		- need to .split('space') the text and store in arr
+		- iterate over the arr
+			-check for words<=3
+			-scramble letters between word[0] and word[length-1]
 		- .join
 		- profit
 		*/
