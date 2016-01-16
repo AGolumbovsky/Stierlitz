@@ -1,0 +1,13 @@
+body {
+	width: 800px;
+	margin: auto;
+	background: #9EE1F7
+}
+
+#isaev {
+	text-align: center;
+}
+
+.text-area {
+	display: inline-block;
+}
