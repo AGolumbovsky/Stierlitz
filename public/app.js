@@ -32,12 +32,15 @@ function encode() {
 
 				if (/[^a-zA-Z0-9]/.test(words[i][words[i].length-1])) { // check the last char is alphanum
 
+					 words[i][words[i].length-2] = words[i][words[i].length-2]; // last char doesn't change
+				}
+				else { 
+					console.log(words[i][words[i].length-1]);
+
 					var obrez = words[i].substring(1, words[i].length-1).split(''); 
 					var obrezM = shuffle(obrez).join('');
 					words[i] = words[i][0] + obrezM + words[i][words[i].length-1];
 				}
-
-				else words[i][words[i].length-2] = words[i][words[i].length-2]; // last char doesn't change
 			} 
 
 			else words[i] = words[i]; // word doesn't change
