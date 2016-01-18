@@ -28,17 +28,27 @@ function encode() {
 
 		for (var i=0; i<words.length; i++) {
 
-			var obrez = words[i].substring(1, words[i].length-1).split('');
-			var obrezM = shuffle(obrez).join('');
-			words[i] = words[i][0] + obrezM + words[i][words[i].length-1];
+			if (words[i].length>3) { // check the word is longet than 3 chars
 
-			console.log(words[i] + " xixi");
-			console.log(typeof words[i] + " xoxo");
+				if (/[^a-zA-Z0-9]/.test(words[i][words[i].length-1])) { // check the last char is alphanum
 
+					var obrez = words[i].substring(1, words[i].length-1).split(''); 
+					var obrezM = shuffle(obrez).join('');
+					words[i] = words[i][0] + obrezM + words[i][words[i].length-1];
+				}
+
+				else words[i][words[i].length-2] = words[i][words[i].length-2]; // last char doesn't change
+			} 
+
+			else words[i] = words[i]; // word doesn't change
 		}
 		
 		var gaveText = document.getElementById('text-encoded');
-		gaveText.value = "Wait for it...";
+		gaveText.value = words.join(' ');
 
 	}
 }
+
+// deal with punctuation (eg "...", ":" and such) don't treat punctuation as last character
+// need to make sure the random always shuffles the words
+//need to mail it from stierlitz email or user's 
