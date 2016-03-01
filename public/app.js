@@ -53,6 +53,7 @@ function encode() {
 }
 
 var keyCombination; // make = to ctrl + alt
+
 document.addEventListener(combination , encode, false);
 
 // deal with punctuation (eg "...", ":" and such) don't treat punctuation as last character
