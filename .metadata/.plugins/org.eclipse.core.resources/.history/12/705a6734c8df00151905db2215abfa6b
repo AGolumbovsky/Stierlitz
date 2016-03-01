@@ -1,0 +1,33 @@
+package firstPackageStierlitz;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class StierlitzTest {
+	
+	WebDriver driver;
+	
+	@Before
+	public void startup() {
+		driver = new FirefoxDriver();
+		driver.get("localhost:8777");
+		driver.manage().window().maximize();
+	}
+	
+	@Test
+	public void mainTest() {
+		
+		String testText = "This string of text is something that I created to check if my super duper cooler program works and exterminate! exterminate exterminate exterminate";
+		
+		WebElement qqq = driver.findElement(By.id("text-original"));
+		qqq.sendKeys(testText);
+		
+		WebElement butt = driver.findElement(By.id("buttEncode"));
+		butt.click();
+	}
+
+}
