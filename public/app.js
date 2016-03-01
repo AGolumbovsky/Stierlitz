@@ -5,7 +5,7 @@ function shuffle (arr) {
 		j = 0,
 		temp = null;
 	
-	for (i = arr.length-1; i>0; i-=1) {
+	for (var i = arr.length-1; i>0; i-=1) {
 		j = Math.floor(Math.random() * (i + 1));
 		temp = arr[i];
 		arr[i] = arr[j];
@@ -52,6 +52,13 @@ function encode() {
 	}
 }
 
+var keyCombination; // make = to ctrl + alt
+document.addEventListener(combination , encode, false);
+
 // deal with punctuation (eg "...", ":" and such) don't treat punctuation as last character
 // need to make sure the random always shuffles the words
-//need to mail it from stierlitz email or user's 
+// need to mail it from stierlitz email or user's 
+
+
+
+
