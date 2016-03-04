@@ -40,15 +40,12 @@ public class StierlitzTest {
 	@After
 	public void teardown() {
 		
-		// make the mofo sleep for 10 sec
 		try {
-			t.sleep(10000);
+			t.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		// close the window as soon as it wakes up
 		driver.close();
 	}
 

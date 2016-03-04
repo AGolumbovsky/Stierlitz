@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 // define port
-var port = 8777;
+var port = 6666;
 
 // serve static files
 app.use(express.static(__dirname + '/public'));

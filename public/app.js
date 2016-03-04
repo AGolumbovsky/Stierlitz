@@ -32,7 +32,8 @@ function encode() {
 
 				if (/[^a-zA-Z0-9]/.test(words[i][words[i].length-1])) { // check the last char is alphanum
 
-					 words[i][words[i].length-2] = words[i][words[i].length-2]; // last char doesn't change
+					console.log(words[i][words[i].length-1]);
+					words[i][words[i].length-2] = words[i][words[i].length-2]; // last char doesn't change
 				}
 				else { 
 					console.log(words[i][words[i].length-1]);
@@ -54,7 +55,7 @@ function encode() {
 
 var keyCombination; // make = to ctrl + alt
 
-document.addEventListener(combination , encode, false);
+document.addEventListener(keyCombination , encode, false);
 
 // deal with punctuation (eg "...", ":" and such) don't treat punctuation as last character
 // need to make sure the random always shuffles the words
