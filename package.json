@@ -1,0 +1,24 @@
+{
+  "name": "stierlitz",
+  "version": "1.0.0",
+  "description": "Help Stierlitz write a letter home",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGolumbovsky/Stierlitz.git"
+  },
+  "author": "Andriy Golumbovsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AGolumbovsky/Stierlitz/issues"
+  },
+  "homepage": "https://github.com/AGolumbovsky/Stierlitz#readme"
+}
