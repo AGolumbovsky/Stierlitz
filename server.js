@@ -4,12 +4,14 @@ var express = require('express');
 var app = express();
 
 // define port
-var port = 8888;
+var port = process.env.PORT || 8888;
 
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
 // listen to port
 app.listen(port, function() {
+
 	console.log("listening on port " + port);
+	
 });
