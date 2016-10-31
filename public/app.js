@@ -1,9 +1,9 @@
 
 function shuffle (arr) {
 
-	var i = 0,
-		j = 0,
-		temp = null;
+	var i = 0;
+	var	j = 0;
+	var temp = null;
 	
 	for (var i = arr.length-1; i>0; i-=1) {
 		j = Math.floor(Math.random() * (i + 1));
