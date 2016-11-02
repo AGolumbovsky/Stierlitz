@@ -2,18 +2,26 @@
 function shuffle (arr) {
 
 	var i = 0;
+
 	var	j = 0;
+
 	var temp = null;
+
 	
 	for (var i = arr.length-1; i>0; i-=1) {
+
 		j = Math.floor(Math.random() * (i + 1));
+
 		temp = arr[i];
+
 		arr[i] = arr[j];
+
 		arr[j] = temp;
 	}
 
 	return arr;
 }
+
 
 function encode() {
 
@@ -25,7 +33,8 @@ function encode() {
 	else {
 
 		var words = gotText.split(' ');
-		console.log(words);
+
+		console.log("logged words", words);
 
 		for (var i=0; i<words.length; i++) {
 
@@ -34,22 +43,33 @@ function encode() {
 
 				// check the last char is alphanum
 				if (/[^a-zA-Z0-9]/.test(words[i][words[i].length-1])) { 
+
 					console.log(words[i][words[i].length-1]);
+
 					words[i][words[i].length-2] = words[i][words[i].length-2]; // last char doesn't change
+
 				}
+
 				else { 
+
 					console.log(words[i][words[i].length-1]);
 
 					var obrez = words[i].substring(1, words[i].length-1).split(''); 
+
 					var obrezM = shuffle(obrez).join('');
+
 					words[i] = words[i][0] + obrezM + words[i][words[i].length-1];
+
 				}
+
 			} 
 
 			else words[i] = words[i]; // word doesn't change
+
 		}
 		
 		var gaveText = document.getElementById('text-encoded');
+
 		gaveText.value = words.join(' ');
 
 	}
