@@ -1,16 +1,12 @@
-var express = require('express');
+const express = require('express');
 
-// initialize app
-var app = express();
+const app = express();
 
-// define port
-var port = process.env.PORT || 8888;
+const port = process.env.PORT || 8888;
 
-// serve static files
 app.use(express.static(__dirname + '/public'));
 
-// listen to port
-app.listen(port, function() {
+app.listen(port, () => {
 
 	console.log("listening on port " + port);
 	
