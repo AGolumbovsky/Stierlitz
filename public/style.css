@@ -4,6 +4,7 @@ body {
 	/* background: #9EE1F7; */
 	background-image: url("pics/17_stierlitz.jpg");
 	background-size: 100%;
+	opacity: 0.3;
 }
 
 #isaev {
