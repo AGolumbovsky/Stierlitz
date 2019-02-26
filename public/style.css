@@ -8,9 +8,17 @@ body {
 }
 
 #isaev {
-	text-align: center;
+	text-align: right;
+	width: 150px;
+	height: 150px;
+
 }
 
 .text-area {
 	display: inline-block;
+}
+
+.text-result {
+	color: blue;
+	opacity: 1;
 }

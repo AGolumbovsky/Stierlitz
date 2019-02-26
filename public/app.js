@@ -58,8 +58,13 @@ function encode() {
 
 		}
 		
+		textResult = words.join(' ');
+
 		let gaveText = document.getElementById('text-encoded');
 		gaveText.value = words.join(' ');
+
+		let resultTextDiv = document.getElementById('text-result');
+		resultTextDiv.innerHTML = ("<h1>" + textResult + "</h1>");
 
 	}
 }
