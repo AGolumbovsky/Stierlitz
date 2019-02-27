@@ -1,11 +1,11 @@
 
 function shuffle (arr) {
 
+	// old code, needs improvement
 	let i = 0;
 	let	j = 0;
 
 	let temp = null;
-
 	
 	for (let i = arr.length-1; i>0; i-=1) {
 
@@ -16,6 +16,7 @@ function shuffle (arr) {
 		arr[j] = temp;
 	}
 
+	
 	return arr;
 }
 
@@ -37,7 +38,7 @@ function encode() {
 			// check the word is longet than 3 chars
 			if (words[i].length>3) {
 
-				// check the last char is alphanum
+				// check the last char is alphanumeric
 				if (/[^a-zA-Z0-9]/.test(words[i][words[i].length-1])) { 
 
 					console.log(words[i][words[i].length-1]);
@@ -47,6 +48,7 @@ function encode() {
 				else { 
 
 					console.log(words[i][words[i].length-1]);
+
 					let obrez = words[i].substring(1, words[i].length-1).split(''); 
 					let obrezM = shuffle(obrez).join('');
 					words[i] = words[i][0] + obrezM + words[i][words[i].length-1];
