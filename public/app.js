@@ -60,13 +60,18 @@ function encode() {
 
 		}
 		
-		textResult = words.join(' ');
-
-		let gaveText = document.getElementById('text-encoded');
-		gaveText.value = words.join(' ');
-
+		
+		// left over from old, on its way out...
+		// let gaveText = document.getElementById('text-encoded');
+		// gaveText.value = words.join(' ');
+		
+		let h1 = document.createElement('H1');
+		let textResult = document.createTextNode(words.join(' '));
+		console.log(textResult)
+		h1.appendChild(textResult);
 		let resultTextDiv = document.getElementById('text-result');
-		resultTextDiv.innerHTML = ("<h1>" + textResult + "</h1>");
+		resultTextDiv.innerHTML = '';
+		resultTextDiv.appendChild(h1)
 
 	}
 }
