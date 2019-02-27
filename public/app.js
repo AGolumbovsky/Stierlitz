@@ -72,7 +72,6 @@ function encode() {
 		let resultTextDiv = document.getElementById('text-result');
 		resultTextDiv.innerHTML = '';
 		resultTextDiv.appendChild(h1)
-
 	}
 }
 
