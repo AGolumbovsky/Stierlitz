@@ -1,10 +1,23 @@
 body {
 	width: 800px;
 	margin: auto;
-	/* background: #9EE1F7; */
 	background-image: url("pics/17_stierlitz.jpg");
 	background-size: 100%;
+
+}
+
+/* body::after {
+	content: '';
 	opacity: 0.3;
+	position: absolute;
+	z-index: -1;
+} */
+
+.text-area {
+	display: inline-block;
+	background: rgba(0,0,0,0);
+	font: 18px Arial, sans-serif;
+	opacity: .4;
 }
 
 #isaev {
@@ -14,11 +27,7 @@ body {
 
 }
 
-.text-area {
-	display: inline-block;
-}
-
-.text-result {
-	color: blue;
-	opacity: 1;
+#text-result {
+	color: black;
+	background: rgba(0,0,0,0);	
 }
